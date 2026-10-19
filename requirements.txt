@@ -10,3 +10,4 @@ chromadb
 streamlit
 python-dotenv
 pytest
+langchain-groq

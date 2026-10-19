@@ -1,8 +1,10 @@
+import os
+from langchain_groq import ChatGroq
 
-from langchain_ollama import ChatOllama
 from src import vector_store
 from src.retriever import get_retriever
-
+from dotenv import load_dotenv
+load_dotenv()
 
 def get_rag_answer(question: str) -> dict:
     if not question.strip():
@@ -35,10 +37,11 @@ def get_rag_answer(question: str) -> dict:
         for doc in documents
     )
 
-    llm = ChatOllama(
-        model="qwen2.5:1.5b",
-        temperature=0,
-    )
+    llm = ChatGroq(
+    model="openai/gpt-oss-20b",
+    temperature=0,
+    api_key=os.getenv("GROQ_API_KEY"),
+)
 
     prompt = f"""You are a healthcare information assistant.
 
