@@ -13,7 +13,7 @@ easy-to-understand response with source documents.
 
 ## Live Demo
 
-**Streamlit app:** \[https://https://healthcareragchatbot-ec3lcpayvh8lo8tgwyafkp.streamlit.app/\]
+**Streamlit app:** \ https://healthcareragchatbot-ec3lcpayvh8lo8tgwyafkp.streamlit.app/
 
 ## Features
 
